@@ -226,7 +226,6 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - api
-      - web
     ports:
       - "80:80"
       - "443:443"
