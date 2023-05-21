@@ -1,6 +1,8 @@
 import I18nServer from './components/i18n-server'
 import { getLocaleOnServer } from '@/i18n/server'
 
+import { Analytics } from '@vercel/analytics/react';
+
 import './styles/globals.css'
 import './styles/markdown.scss'
 
@@ -24,6 +26,7 @@ const LocaleLayout = ({
       >
         {/* @ts-expect-error Async Server Component */}
         <I18nServer locale={locale}>{children}</I18nServer>
+        <Analytics />
       </body>
     </html>
   )
